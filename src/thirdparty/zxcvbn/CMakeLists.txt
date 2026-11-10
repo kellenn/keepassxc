@@ -7,3 +7,5 @@ if(CC_HAS_Wshadow_local)
     set_property(SOURCE zxcvbn.c APPEND PROPERTY COMPILE_OPTIONS "-Wno-shadow-local")
 endif()
 target_include_directories(zxcvbn PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+set_property(TARGET zxcvbn PROPERTY SBOM_SOURCE_PATH src/thirdparty/zxcvbn/zxcvbn.c)
